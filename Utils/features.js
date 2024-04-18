@@ -9,7 +9,8 @@ export const sendCookies = (user , res, message , statusCode = 200) => {
         maxage : 1000 * 60 * 15, 
         /*sameSite : process.env.NODE_ENV !== 'Development' ? "lax" : "none",*/
         sameSite : "none",
-        secure : process.env.NODE_ENV !== 'Development' ? false :true, 
+        /*secure : process.env.NODE_ENV !== 'Development' ? false :true, */
+         secure : true, 
 
      }).json({
         success: true,
